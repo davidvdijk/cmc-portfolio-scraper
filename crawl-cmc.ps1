@@ -74,13 +74,10 @@ $elements | ForEach-Object {
                 href = $href;
             }
             $coin = New-Object psobject -Property $coinProperties
-            #$coin | Format-Table
             $coins.Add($coin)
 		}
 	} catch {
 		echo $_.Exception
-        #echo $_.ErrorDetails
-        #echo $_.ScriptStackTrace
         exit
 	}
 }
